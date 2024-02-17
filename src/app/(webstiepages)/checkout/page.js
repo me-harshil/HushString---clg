@@ -147,6 +147,7 @@ const Checkout = () => {
         progress: undefined,
         theme: "light",
       });
+      router.push(`/order?id=${txnRes.orderId}`);
       // let txnToken = txnRes.txnToken;
       // console.log(txnToken);
       // var config = {

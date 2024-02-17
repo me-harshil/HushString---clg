@@ -97,6 +97,7 @@ const ForgotPassword = () => {
           draggable: true,
           theme: "light",
         });
+        router.push("/login");
       } else {
         toast.error(data.message, {
           position: "top-center",

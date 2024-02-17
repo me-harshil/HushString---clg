@@ -1,8 +1,11 @@
+"use server";
 const https = require("https");
 const PaytmChecksum = require("paytmchecksum");
 import Order from "@/app/models/Order";
 import connectDB from "@/app/middleware/connectDB";
 import Product from "@/app/models/Product";
+import { redirect } from "next/navigation";
+import { orderUpdate } from "./order";
 
 export async function POST(request) {
   const mongoDB = await connectDB();
@@ -126,16 +129,22 @@ export async function POST(request) {
   // return Response.json({ success: true, response });
 
   // This is only for testing purpose and will be removed in production
-  let paytmCallback = await fetch(
-    `${process.env.NEXT_PUBLIC_HOST}/api/paytmCallback`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ORDERID: data.orderId, STATUS: "TXN_SUCCESS" }),
-    }
-  );
+  // let paytmCallback = await fetch(
+  //   `${process.env.NEXT_PUBLIC_HOST}/api/paytmCallback`,
+  //   {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ ORDERID: data.orderId, STATUS: "TXN_SUCCESS" }),
+  //   }
+  // );
 
-  return Response.json({ success: true });
+  // check
+  let orderId = await orderUpdate({
+    ORDERID: data.orderId,
+    STATUS: "TXN_SUCCESS",
+  });
+
+  return Response.json({ success: true, orderId });
 }

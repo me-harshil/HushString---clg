@@ -13,22 +13,34 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link href="/ukulele" className="text-gray-600 hover:text-gray-800">
+                  <Link
+                    href="/ukulele"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Ukuelele
                   </Link>
                 </li>
                 <li>
-                  <Link href="/guitars" className="text-gray-600 hover:text-gray-800">
+                  <Link
+                    href="/guitars"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Guitar
                   </Link>
                 </li>
                 <li>
-                  <Link href="/keyboards" className="text-gray-600 hover:text-gray-800">
+                  <Link
+                    href="/keyboards"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Keyboard/Piano
                   </Link>
                 </li>
                 <li>
-                  <Link href="/drum-kits" className="text-gray-600 hover:text-gray-800">
+                  <Link
+                    href="/drum-kits"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Drum Kit
                   </Link>
                 </li>
@@ -40,24 +52,23 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
+                  <Link className="text-gray-600 hover:text-gray-800" href={"/contact"}>
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
+                  <Link
+                    className="text-gray-600 hover:text-gray-800"
+                    href={"/about"}
+                  >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Careers
-                  </a>
+                  <a className="text-gray-600 hover:text-gray-800">Careers</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Stores
-                  </a>
+                  <Link className="text-gray-600 hover:text-gray-800" href={"/"}>Store</Link>
                 </li>
               </nav>
             </div>
@@ -67,24 +78,16 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Instagram
-                  </a>
+                  <a className="text-gray-600 hover:text-gray-800">Instagram</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    X
-                  </a>
+                  <a className="text-gray-600 hover:text-gray-800">X</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    YouTube
-                  </a>
+                  <a className="text-gray-600 hover:text-gray-800">YouTube</a>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Pinterest
-                  </a>
+                  <a className="text-gray-600 hover:text-gray-800">Pinterest</a>
                 </li>
               </nav>
             </div>
@@ -98,7 +101,7 @@ const Footer = () => {
                     htmlFor="footer-field"
                     className="leading-7 text-sm text-gray-600"
                   >
-                    Placeholder
+                    E-mail
                   </label>
                   <input
                     type="text"
@@ -108,13 +111,12 @@ const Footer = () => {
                   />
                 </div>
                 <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
-                  Button
+                  Subscribe
                 </button>
               </div>
               <p className="text-gray-500 text-sm mt-2 md:text-left text-center">
-                Bitters chicharrones fanny pack
-                <br className="lg:block hidden" />
-                waistcoat green juice
+                Subscribe now to receive timely updates on new product releases
+                and exclusive early access to special discount offers!
               </p>
             </div>
           </div>
@@ -122,12 +124,10 @@ const Footer = () => {
         <div className="bg-gray-100">
           <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
             <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-             
               <span className="ml-3 text-xl">HushString</span>
             </a>
             <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
               © 2023 HushString - All Rights Reserved
-             
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
               <a className="text-gray-500">
